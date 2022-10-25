@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1d1d;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+body nav {
+  background-color: #181818;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 136px;
+  position: fixed;
+  padding-bottom: 15%;
+}
+body nav .pp {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 10px auto 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 3px solid #FFF;
+  object-fit: cover;
+}
+body nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+body nav .nav-list li {
+  list-style: none;
+  padding-top: 7px;
+  border-top: solid #282828;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body nav .nav-list li a {
+  justify-content: space-between;
+  text-decoration: none;
+  color: #909096;
+}
+body nav .nav-list li .active {
+  color: #F91056;
+}
+body nav #social-medias .social-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+body nav #social-medias .social-list li {
+  list-style: none;
+}
+body nav #social-medias a .fa-linkedin, body nav #social-medias a .fa-github, body nav #social-medias a .fa-instagram {
+  color: #909096;
+  transition: 0.4s;
+  font-size: 24px;
+}
+body nav #social-medias .social-list li:hover a .fa-linkedin {
+  color: #0e76a8;
+}
+body nav #social-medias .social-list li:hover a .fa-github {
+  color: #fff;
+}
+body nav #social-medias .social-list li:hover a .fa-instagram {
+  color: #E1306C;
+}
+body .intro {
+  grid-column: 2/3;
+  margin: 5%;
+  display: flex;
+  margin-top: 15vh;
+}
+body .intro h1 {
+  font-size: 50px;
+  display: flex;
+}
+body .intro #oscar {
+  color: #F91056;
+}
+body .intro #title:before {
+  content: "<h1>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  margin-left: -2rem;
+}
+body .intro #title:after {
+  content: "</h1>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 7rem;
+  margin-left: 52rem;
+}
+body .intro #skills-title:before {
+  content: "<h1>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  margin-left: -2rem;
+}
+body .intro #skills-title:after {
+  content: "</h1>";
+  font-family: "La Belle Aurore", cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 3rem;
+  margin-left: 8rem;
+}
+body .about {
+  margin: 10%;
+  padding: 5%;
+  grid-column: 2/3;
+  border: 2px solid #F91056;
+  border-radius: 7px;
+  outline: none;
+  box-shadow: 0 0 10px #F91056;
+  font-size: 24px;
+}
+body .about a {
+  color: #fff;
+}
+body .about a:hover {
+  color: #F91056;
+}
+body .about span {
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+body .about .fade {
+  opacity: 1;
+  color: white;
+}
+
+/*# sourceMappingURL=build.css.map */
