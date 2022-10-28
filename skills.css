@@ -6,8 +6,7 @@
 body {
   box-sizing: border-box;
 }
-
-.skills-list {
+body .skills-list {
   margin: 0 5%;
   padding: 0 5%;
   grid-column: 2/3;
@@ -15,12 +14,10 @@ body {
   flex-direction: column;
   gap: 5vh;
 }
-
-.skill-title {
+body .skills-list .skill-title {
   margin-top: 5%;
 }
-
-.skill-title:before {
+body .skills-list .skill-title:before {
   content: ">";
   font-family: "La Belle Aurore", cursive;
   color: #515152;
@@ -29,15 +26,13 @@ body {
   margin-left: -2rem;
   margin-top: -0.5rem;
 }
-
-.skills-type {
+body .skills-list .skills-type {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5vw;
 }
-
-article {
+body .skills-list .skills-type article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,8 +50,7 @@ article {
   background: #181818;
   gap: 10px;
 }
-
-article:hover::before {
+body .skills-list .skills-type article:hover::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,16 +63,14 @@ article:hover::before {
   pointer-events: none;
   content: "";
 }
-
-article img {
+body .skills-list .skills-type article:hover article img {
   max-width: 50%;
   max-height: 50%;
 }
-
-h3 {
+body .skills-list .skills-type article:hover article h3 {
   font-size: 1.2em;
   font-weight: 900;
   line-height: 1.75;
 }
 
-/*# sourceMappingURL=skillsbuild.css.map */
+/*# sourceMappingURL=skills.css.map */

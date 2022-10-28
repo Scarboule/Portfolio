@@ -88,39 +88,22 @@ body .intro h1 {
 body .intro #oscar {
   color: #F91056;
 }
-body .intro #title:before {
+body .intro #title:before, body .intro #title:after, body .intro #skills-title:after, body .intro #skills-title:before {
   content: "<h1>";
   font-family: "La Belle Aurore", cursive;
   color: #515152;
   font-size: 18px;
   position: absolute;
+}
+body .intro #title:before, body .intro #skills-title:before {
   margin-top: -2rem;
   margin-left: -2rem;
 }
 body .intro #title:after {
-  content: "</h1>";
-  font-family: "La Belle Aurore", cursive;
-  color: #515152;
-  font-size: 18px;
-  position: absolute;
   margin-top: 7rem;
   margin-left: 52rem;
 }
-body .intro #skills-title:before {
-  content: "<h1>";
-  font-family: "La Belle Aurore", cursive;
-  color: #515152;
-  font-size: 18px;
-  position: absolute;
-  margin-top: -2rem;
-  margin-left: -2rem;
-}
 body .intro #skills-title:after {
-  content: "</h1>";
-  font-family: "La Belle Aurore", cursive;
-  color: #515152;
-  font-size: 18px;
-  position: absolute;
   margin-top: 3rem;
   margin-left: 8rem;
 }
@@ -133,20 +116,18 @@ body .about {
   outline: none;
   box-shadow: 0 0 10px #F91056;
   font-size: 24px;
+  /*span
+  *  opacity: 0
+  *  transition: all 0.01s ease */
+  /*.fade
+  *  opacity: 1
+  *  color: white */
 }
 body .about a {
   color: #fff;
 }
 body .about a:hover {
   color: #F91056;
-}
-body .about span {
-  opacity: 0;
-  transition: all 0.1s ease;
-}
-body .about .fade {
-  opacity: 1;
-  color: white;
 }
 
 /*# sourceMappingURL=build.css.map */
