@@ -1,11 +1,11 @@
-### Hi guys, This is my portfolio.
-# This project is not finished
-# This frontend project has been made during my second year studying web developpement at school. 
+# Hi guys, This is my portfolio.
+### This project is not finished
+### This frontend project has been made during my second year studying web developpement at school. 
 
 You can see it buy clicking on this link https://portfolio-scarboule.vercel.app/ 
 or you can download it with this one https://github.com/Scarboule/Portfolio/archive/refs/heads/main.zip .
 
-# Deployment
+### Deployment
 This website has been first deployed using Github pages. 
 Then i've began to use Vecel.
 By creating an account on Vercel, linked with Github and enable it on this repository.
