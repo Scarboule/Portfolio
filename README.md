@@ -14,7 +14,7 @@ By creating an account on Vercel, linked with Github and enable it on this repos
 It Automaticly deploy the main branch with new and customisable domains names.
 Vercel automatically handles the configuration of the build settings for my framework. Vercel also provides build logs, to help me to identify issues before i deploy to production.
 I can now use Checkly, Analytics, and Usage to monitor how well my site is performing.
-I've also added and enabled "imgbot" and "AccessLint" to this repository.
+I've also added and enabled "imgbot" and "AccessLint" to this repository.  
 imgbot has reduced the loading time of my project by 40%~ compressing my images files.
-AccessLint helps me identify accessibility issue in my code.
+AccessLint helps me identify accessibility issue in my code.  
 Thoses to are automaticly doing merge request fixing and identifying my issues.
