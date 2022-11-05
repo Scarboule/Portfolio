@@ -1,8 +1,13 @@
+
+
 $u: 1.25
 $d: 10em
 $p: .5em
 $o: 0.5em
 $l: 6px
+
+
+
 
 *
     padding: 0
@@ -79,13 +84,13 @@ body
             display: flex
         #oscar
             color: #F91056
-        #title:before, #title:after, #skills-title:after, #skills-title:before
+        #title:before, #title:after, #skills-title:after, #skills-title:before, #projects-title:before, #projects-title:after
             content: '<h1>'
             font-family: 'La Belle Aurore',cursive
             color: #515152
             font-size: 18px
             position: absolute
-        #title:before, #skills-title:before
+        #title:before, #skills-title:before, #projects-title:before
             margin-top: -2rem
             margin-left: -2rem
         #title:after
@@ -94,6 +99,9 @@ body
         #skills-title:after
             margin-top: 3rem
             margin-left: 8rem
+        #projects-title:after
+            margin-top: 3rem
+            margin-left: 13rem
     .about
         margin: 10%
         padding: 5%
@@ -114,16 +122,13 @@ body
         display: flex
         flex-direction: column
         gap: 5vh
-        .skill-title
-            margin-top: 5%
         .skill-title:before
             content: '>'
             font-family: 'La Belle Aurore',cursive
             color: #515152
-            font-size: 36px
+            font-size: 28px
             position: absolute
             margin-left: -2rem
-            margin-top: -0.5rem
         .skills-type
             display: flex
             flex-wrap: wrap
@@ -147,8 +152,8 @@ body
                 background: #181818
                 gap: 10px
                 img
-                    max-width: 50%
-                    max-height: 50%
+                    max-width: 60%
+                    max-height: 60%
                 h3 
                     font-size: 1.2em
                     font-weight: 900
@@ -176,6 +181,124 @@ body
             opacity: 1
             color: white
 
+@media(max-width: 1018px)
+    body
+        display: flex
+        flex-direction: column
+        align-items: center
+        nav
+            display: none
+            z-index: 90
+            width: 100vw
+            font-size: 28px
+            padding-bottom: 40px
+            .pp
+                margin-top: 30px
+            .nav-list
+                gap: 30px
+                li
+                    padding-top: 30px
+            #social-medias a .fa-linkedin, #social-medias a .fa-github, #social-medias a .fa-instagram
+                font-size: 32px
+        #menu
+            z-index: 100
+            position: fixed
+            top: 0px
+            right: 0px
+            background-color: #fff
+            width: 80px
+            height: 80px
+            border-bottom-left-radius: 100%
+            cursor: pointer
+            i
+                position: absolute
+                color: #000
+                top: 20px
+                right: 20px
+                font-size: 26px
+        .intro
+            .title
+                font-size: 45px
+            #title:after
+                margin-top: 6rem
+                margin-left: 47rem
+        .skills-list
+            .skill-title
+                margin-top: 5%
+@media(max-width: 815px)
+    body
+        .intro
+            .title
+                font-size: 30px
+            #title:after
+                margin-top: 4rem
+                margin-left: 31rem
+        .about
+            margin-top: 20%
+@media(max-width: 600px)
+    body
+        .intro
+            margin-top: 25%
+            .title
+                font-size: 28px
+            #title:after
+                margin-top: 3rem
+                margin-left: 29rem
+        .about
+            margin-top: 20%
+@media(max-width: 506px)
+    body
+        .intro
+            margin-top: 35%
+            .title
+                font-size: 21px
+            #title:after
+                margin-top: 3rem
+                margin-left: 20rem
+        .about
+            margin-top: 30%
+        .skills-list
+            .skill-title
+                margin-top: 10%
+        .skills-type
+            article
+                --s0: calc(0.4em + 4px) !important
+                --s1: calc(0.4em + 4px + 0.4em) !important
+                width: 8em !important
+                height: calc(8em * 1.4) !important
+                border-width: 0 var(--s0) var(--s0) 0 !important
+                padding: var(--s1) 0.4em 0.4em var(--s1) !important
+                h3 
+                    font-size: 1em !important
+                    font-weight: 0 !important
+                    line-height: 1.75 !important
+            article:hover
+                &::before 
+                    border-width: 0.4em 0 0 0.4em !important
+                    border-radius: 40% 20% !important
+                    width: 8em !important
+                    height: calc(8em * 1.4) !important
+                    box-shadow: inset 0 0 0 4px #F91056 !important
+                
 
-
-
+@media(max-width: 370px)
+    body
+        .skills-type
+            article
+                --s0: calc(0.3em + 4px) !important
+                --s1: calc(0.3em + 4px + 0.3em) !important
+                width: 6em !important
+                height: calc(6em * 1.4) !important
+                border-width: 0 var(--s0) var(--s0) 0 !important
+                padding: var(--s1) 0.3em 0.3em var(--s1) !important
+                h3 
+                    font-size: 14px !important
+                    font-weight: 500 !important
+                    line-height: 1.75 !important
+            article:hover
+                &::before 
+                    border-width: 0.3em 0 0 0.3em !important
+                    border-radius: 40% 20% !important
+                    width: 6em !important
+                    height: calc(6em * 1.4) !important
+                    box-shadow: inset 0 0 0 4px #F91056 !important

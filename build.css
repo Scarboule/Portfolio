@@ -89,14 +89,14 @@ body .intro h1 {
 body .intro #oscar {
   color: #F91056;
 }
-body .intro #title:before, body .intro #title:after, body .intro #skills-title:after, body .intro #skills-title:before {
+body .intro #title:before, body .intro #title:after, body .intro #skills-title:after, body .intro #skills-title:before, body .intro #projects-title:before, body .intro #projects-title:after {
   content: "<h1>";
   font-family: "La Belle Aurore", cursive;
   color: #515152;
   font-size: 18px;
   position: absolute;
 }
-body .intro #title:before, body .intro #skills-title:before {
+body .intro #title:before, body .intro #skills-title:before, body .intro #projects-title:before {
   margin-top: -2rem;
   margin-left: -2rem;
 }
@@ -107,6 +107,10 @@ body .intro #title:after {
 body .intro #skills-title:after {
   margin-top: 3rem;
   margin-left: 8rem;
+}
+body .intro #projects-title:after {
+  margin-top: 3rem;
+  margin-left: 13rem;
 }
 body .about {
   margin: 10%;
@@ -138,17 +142,13 @@ body .skills-list {
   *  opacity: 1
   *  color: white */
 }
-body .skills-list .skill-title {
-  margin-top: 5%;
-}
 body .skills-list .skill-title:before {
   content: ">";
   font-family: "La Belle Aurore", cursive;
   color: #515152;
-  font-size: 36px;
+  font-size: 28px;
   position: absolute;
   margin-left: -2rem;
-  margin-top: -0.5rem;
 }
 body .skills-list .skills-type {
   display: flex;
@@ -175,8 +175,8 @@ body .skills-list .skills-type article {
   gap: 10px;
 }
 body .skills-list .skills-type article img {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 60%;
+  max-height: 60%;
 }
 body .skills-list .skills-type article h3 {
   font-size: 1.2em;
@@ -196,6 +196,148 @@ body .skills-list .skills-type article:hover::before {
   box-shadow: inset 0 0 0 6px #F91056;
   pointer-events: none;
   content: "";
+}
+
+@media (max-width: 1018px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body nav {
+    display: none;
+    z-index: 90;
+    width: 100vw;
+    font-size: 28px;
+    padding-bottom: 40px;
+  }
+  body nav .pp {
+    margin-top: 30px;
+  }
+  body nav .nav-list {
+    gap: 30px;
+  }
+  body nav .nav-list li {
+    padding-top: 30px;
+  }
+  body nav #social-medias a .fa-linkedin, body nav #social-medias a .fa-github, body nav #social-medias a .fa-instagram {
+    font-size: 32px;
+  }
+  body #menu {
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-bottom-left-radius: 100%;
+    cursor: pointer;
+  }
+  body #menu i {
+    position: absolute;
+    color: #000;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+  }
+  body .intro .title {
+    font-size: 45px;
+  }
+  body .intro #title:after {
+    margin-top: 6rem;
+    margin-left: 47rem;
+  }
+  body .skills-list .skill-title {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 815px) {
+  body .intro .title {
+    font-size: 30px;
+  }
+  body .intro #title:after {
+    margin-top: 4rem;
+    margin-left: 31rem;
+  }
+  body .about {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 600px) {
+  body .intro {
+    margin-top: 25%;
+  }
+  body .intro .title {
+    font-size: 28px;
+  }
+  body .intro #title:after {
+    margin-top: 3rem;
+    margin-left: 29rem;
+  }
+  body .about {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 506px) {
+  body .intro {
+    margin-top: 35%;
+  }
+  body .intro .title {
+    font-size: 21px;
+  }
+  body .intro #title:after {
+    margin-top: 3rem;
+    margin-left: 20rem;
+  }
+  body .about {
+    margin-top: 30%;
+  }
+  body .skills-list .skill-title {
+    margin-top: 10%;
+  }
+  body .skills-type article {
+    --s0: calc(0.4em + 4px) !important;
+    --s1: calc(0.4em + 4px + 0.4em) !important;
+    width: 8em !important;
+    height: 11.2em !important;
+    border-width: 0 var(--s0) var(--s0) 0 !important;
+    padding: var(--s1) 0.4em 0.4em var(--s1) !important;
+  }
+  body .skills-type article h3 {
+    font-size: 1em !important;
+    font-weight: 0 !important;
+    line-height: 1.75 !important;
+  }
+  body .skills-type article:hover::before {
+    border-width: 0.4em 0 0 0.4em !important;
+    border-radius: 40% 20% !important;
+    width: 8em !important;
+    height: 11.2em !important;
+    box-shadow: inset 0 0 0 4px #F91056 !important;
+  }
+}
+@media (max-width: 370px) {
+  body .skills-type article {
+    --s0: calc(0.3em + 4px) !important;
+    --s1: calc(0.3em + 4px + 0.3em) !important;
+    width: 6em !important;
+    height: 8.4em !important;
+    border-width: 0 var(--s0) var(--s0) 0 !important;
+    padding: var(--s1) 0.3em 0.3em var(--s1) !important;
+  }
+  body .skills-type article h3 {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.75 !important;
+  }
+  body .skills-type article:hover::before {
+    border-width: 0.3em 0 0 0.3em !important;
+    border-radius: 40% 20% !important;
+    width: 6em !important;
+    height: 8.4em !important;
+    box-shadow: inset 0 0 0 4px #F91056 !important;
+  }
 }
 
 /*# sourceMappingURL=build.css.map */
