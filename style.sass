@@ -17,7 +17,7 @@ $l: 6px
 body
     background-color: #1d1d1d
     display: grid
-    grid-template-columns: 1fr 8fr
+    grid-template-columns: 1fr 7fr
     font-family: "Open Sans",sans-serif
     color: #fff
     box-sizing: border-box
@@ -28,14 +28,14 @@ body
         flex-direction: column
         justify-content: space-between
         height: 100vh
-        width: 136px
+        width: 160px
         position: fixed
-        padding-bottom: 15%
+        padding-bottom: 10vh
         .pp 
             display: block
             width: 128px
             height: 128px
-            margin: 10px auto 30px
+            margin: 10vh auto 0
             border-radius: 50%
             background-color: #FFF
             border: 3px solid #FFF
@@ -44,15 +44,17 @@ body
             display: flex
             flex-direction: column
             align-items: center
-            gap: 10px
+            gap: 20px
             li
                 list-style: none
-                padding-top: 7px
+                padding-top: 20px
                 border-top: solid #282828
                 width: 100%
                 display: flex
                 justify-content: center
                 a
+                    font-size: 18px
+                    font-weight: 600
                     justify-content: space-between
                     text-decoration: none
                     color: #909096
@@ -64,6 +66,9 @@ body
                 justify-content: space-evenly
                 li
                     list-style: none
+                    a
+                        i
+                            font-size: 28px
         #social-medias a .fa-linkedin, #social-medias a .fa-github, #social-medias a .fa-instagram
             color: #909096
             transition: 0.4s
@@ -79,7 +84,7 @@ body
         margin: 5%
         display: flex
         margin-top: 15vh 
-        h1
+        #title
             font-size: 50px
             display: flex
         #oscar
@@ -172,7 +177,52 @@ body
                     box-shadow: inset 0 0 0 $l #F91056
                     pointer-events: none
                     content: ''
-                
+    .project-list
+        grid-column: 2/3
+        display: flex
+        position: relative
+        .project
+            height: 400px
+            width: 400px
+            padding: 5%
+            position: relative
+            display: flex
+            justify-content: center
+            align-content: center
+            align-items: center
+            flex-wrap: wrap
+            .card
+                background-color: #181818
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-content: center
+                align-items: center
+                z-index: 2
+                position: relative
+                transform: translateY(100px)
+                transition: 0.5s ease
+                img
+                    max-height: 50%
+                    max-width: 50%
+            .open-card
+                width: 100%
+                background-color: #909096
+                display: flex
+                justify-content: center
+                align-content: center
+                align-items: center
+                position: relative
+                z-index: 1
+                transform: translateY(-100px)
+                transition: 0.5s ease
+        .project:hover .card
+                transform: translateY(0)
+                box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff
+        .project:hover .open-card
+                transform: translateY(0)
 
         /*span
             opacity: 0
@@ -217,18 +267,19 @@ body
                 right: 20px
                 font-size: 26px
         .intro
-            .title
-                font-size: 45px
+            #title
+                font-size: 40px
             #title:after
                 margin-top: 6rem
-                margin-left: 47rem
+                margin-left: 41rem
         .skills-list
             .skill-title
                 margin-top: 5%
 @media(max-width: 815px)
-    body
+    body    
+        
         .intro
-            .title
+            #title
                 font-size: 30px
             #title:after
                 margin-top: 4rem
@@ -239,7 +290,7 @@ body
     body
         .intro
             margin-top: 25%
-            .title
+            #title
                 font-size: 28px
             #title:after
                 margin-top: 3rem
@@ -250,7 +301,7 @@ body
     body
         .intro
             margin-top: 35%
-            .title
+            #title
                 font-size: 21px
             #title:after
                 margin-top: 3rem

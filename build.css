@@ -7,7 +7,7 @@
 body {
   background-color: #1d1d1d;
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 1fr 7fr;
   font-family: "Open Sans", sans-serif;
   color: #fff;
   box-sizing: border-box;
@@ -19,15 +19,15 @@ body nav {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  width: 136px;
+  width: 160px;
   position: fixed;
-  padding-bottom: 15%;
+  padding-bottom: 10vh;
 }
 body nav .pp {
   display: block;
   width: 128px;
   height: 128px;
-  margin: 10px auto 30px;
+  margin: 10vh auto 0;
   border-radius: 50%;
   background-color: #FFF;
   border: 3px solid #FFF;
@@ -37,17 +37,19 @@ body nav .nav-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 body nav .nav-list li {
   list-style: none;
-  padding-top: 7px;
+  padding-top: 20px;
   border-top: solid #282828;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 body nav .nav-list li a {
+  font-size: 18px;
+  font-weight: 600;
   justify-content: space-between;
   text-decoration: none;
   color: #909096;
@@ -61,6 +63,9 @@ body nav #social-medias .social-list {
 }
 body nav #social-medias .social-list li {
   list-style: none;
+}
+body nav #social-medias .social-list li a i {
+  font-size: 28px;
 }
 body nav #social-medias a .fa-linkedin, body nav #social-medias a .fa-github, body nav #social-medias a .fa-instagram {
   color: #909096;
@@ -82,7 +87,7 @@ body .intro {
   display: flex;
   margin-top: 15vh;
 }
-body .intro h1 {
+body .intro #title {
   font-size: 50px;
   display: flex;
 }
@@ -135,12 +140,6 @@ body .skills-list {
   display: flex;
   flex-direction: column;
   gap: 5vh;
-  /*span
-  *  opacity: 0
-  *  transition: all 0.01s ease */
-  /*.fade
-  *  opacity: 1
-  *  color: white */
 }
 body .skills-list .skill-title:before {
   content: ">";
@@ -197,6 +196,65 @@ body .skills-list .skills-type article:hover::before {
   pointer-events: none;
   content: "";
 }
+body .project-list {
+  grid-column: 2/3;
+  display: flex;
+  position: relative;
+  /*span
+  *  opacity: 0
+  *  transition: all 0.01s ease */
+  /*.fade
+  *  opacity: 1
+  *  color: white */
+}
+body .project-list .project {
+  height: 400px;
+  width: 400px;
+  padding: 5%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .project-list .project .card {
+  background-color: #181818;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  transform: translateY(100px);
+  transition: 0.5s ease;
+}
+body .project-list .project .card img {
+  max-height: 50%;
+  max-width: 50%;
+}
+body .project-list .project .open-card {
+  width: 100%;
+  background-color: #909096;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-100px);
+  transition: 0.5s ease;
+}
+body .project-list .project:hover .card {
+  transform: translateY(0);
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+body .project-list .project:hover .open-card {
+  transform: translateY(0);
+}
 
 @media (max-width: 1018px) {
   body {
@@ -241,19 +299,19 @@ body .skills-list .skills-type article:hover::before {
     right: 20px;
     font-size: 26px;
   }
-  body .intro .title {
-    font-size: 45px;
+  body .intro #title {
+    font-size: 40px;
   }
   body .intro #title:after {
     margin-top: 6rem;
-    margin-left: 47rem;
+    margin-left: 41rem;
   }
   body .skills-list .skill-title {
     margin-top: 5%;
   }
 }
 @media (max-width: 815px) {
-  body .intro .title {
+  body .intro #title {
     font-size: 30px;
   }
   body .intro #title:after {
@@ -268,7 +326,7 @@ body .skills-list .skills-type article:hover::before {
   body .intro {
     margin-top: 25%;
   }
-  body .intro .title {
+  body .intro #title {
     font-size: 28px;
   }
   body .intro #title:after {
@@ -283,7 +341,7 @@ body .skills-list .skills-type article:hover::before {
   body .intro {
     margin-top: 35%;
   }
-  body .intro .title {
+  body .intro #title {
     font-size: 21px;
   }
   body .intro #title:after {
