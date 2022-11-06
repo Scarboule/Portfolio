@@ -87,21 +87,21 @@ body .intro {
   display: flex;
   margin-top: 15vh;
 }
-body .intro #title, body .intro #projects-title, body .intro #skills-title {
+body .intro #title, body .intro #projects-title, body .intro #skills-title, body .intro #contact-title {
   font-size: 50px;
   display: flex;
 }
 body .intro #oscar {
   color: #F91056;
 }
-body .intro #title:before, body .intro #title:after, body .intro #skills-title:after, body .intro #skills-title:before, body .intro #projects-title:before, body .intro #projects-title:after {
+body .intro #title:before, body .intro #title:after, body .intro #skills-title:after, body .intro #skills-title:before, body .intro #projects-title:before, body .intro #projects-title:after, body .intro #contact-title:before, body .intro #contact-title:after {
   content: "<h1>";
   font-family: "La Belle Aurore", cursive;
   color: #515152;
   font-size: 18px;
   position: absolute;
 }
-body .intro #title:before, body .intro #skills-title:before, body .intro #projects-title:before {
+body .intro #title:before, body .intro #skills-title:before, body .intro #projects-title:before, body .intro #contact-title:before {
   margin-top: -2rem;
   margin-left: -2rem;
 }
@@ -116,6 +116,10 @@ body .intro #skills-title:after {
 body .intro #projects-title:after {
   margin-top: 3rem;
   margin-left: 13rem;
+}
+body .intro #contact-title:after {
+  margin-top: 3rem;
+  margin-left: 18rem;
 }
 body .about {
   margin: 10%;
@@ -133,8 +137,46 @@ body .about a {
 body .about a:hover {
   color: #F91056;
 }
+body .about .contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body .about .contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 5s ease;
+}
+body .about .contact-list li i {
+  font-size: 50px;
+}
+body .about .contact-list li a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 20px;
+}
+body .about .contact-list li a i {
+  font-size: 50px;
+}
+body .about .contact-list li a:hover {
+  color: #FFF;
+}
+body .about .contact-list li:hover a .fa-instagram {
+  color: #E1306C;
+  transition: 0.5s ease;
+}
+body .about .contact-list li:hover a .fa-github {
+  color: #909096;
+  transition: 0.5s ease;
+}
+body .about .contact-list li:hover a .fa-linkedin {
+  color: #0e76a8;
+  transition: 0.5s ease;
+}
 body .skills-list {
-  margin: 0 5%;
+  margin: 0 5% 5% 5%;
   padding: 0 5%;
   grid-column: 2/3;
   display: flex;
@@ -379,6 +421,15 @@ body .project-list .project:hover .open-card {
   }
   body .about {
     margin-top: 30%;
+  }
+  body .about .contact-list li {
+    font-size: 18px;
+  }
+  body .about .contact-list li i {
+    font-size: 24px;
+  }
+  body .about .contact-list li a i {
+    font-size: 24px;
   }
   body .skills-list .skill-title {
     margin-top: 10%;

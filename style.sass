@@ -1,13 +1,9 @@
 
-
 $u: 1.25
 $d: 10em
 $p: .5em
 $o: 0.5em
 $l: 6px
-
-
-
 
 *
     padding: 0
@@ -84,18 +80,18 @@ body
         margin: 5%
         display: flex
         margin-top: 15vh 
-        #title, #projects-title, #skills-title
+        #title, #projects-title, #skills-title, #contact-title
             font-size: 50px
             display: flex
         #oscar
             color: #F91056
-        #title:before, #title:after, #skills-title:after, #skills-title:before, #projects-title:before, #projects-title:after
+        #title:before, #title:after, #skills-title:after, #skills-title:before, #projects-title:before, #projects-title:after, #contact-title:before, #contact-title:after
             content: '<h1>'
             font-family: 'La Belle Aurore',cursive
             color: #515152
             font-size: 18px
             position: absolute
-        #title:before, #skills-title:before, #projects-title:before
+        #title:before, #skills-title:before, #projects-title:before, #contact-title:before
             margin-top: -2rem
             margin-left: -2rem
         #title:after
@@ -107,6 +103,9 @@ body
         #projects-title:after
             margin-top: 3rem
             margin-left: 13rem
+        #contact-title:after
+            margin-top: 3rem
+            margin-left: 18rem
     .about
         margin: 10%
         padding: 5%
@@ -120,8 +119,37 @@ body
             color: #fff
         a:hover
             color: #F91056
+        .contact-list
+            display: flex
+            flex-direction: column
+            gap: 50px   
+            li
+                display: flex
+                align-items: center
+                gap: 20px
+                transition: 5s ease
+                i
+                    font-size: 50px
+                a
+                    display: flex
+                    text-decoration: none
+                    align-items: center
+                    gap: 20px
+                    i
+                        font-size: 50px
+                a:hover
+                    color: #FFF
+            li:hover a .fa-instagram
+                color: #E1306C
+                transition: 0.5s ease
+            li:hover a .fa-github
+                color: #909096
+                transition: 0.5s ease
+            li:hover a .fa-linkedin
+                color: #0e76a8
+                transition: 0.5s ease
     .skills-list
-        margin: 0 5%
+        margin: 0 5% 5% 5%
         padding: 0 5%
         grid-column: 2/3
         display: flex
@@ -246,8 +274,6 @@ body
         .project:hover .open-card
                 transform: translateY(0)
                 box-shadow: 0 20px 50px rgba(0,0 ,0 ,0.8)
-
-
         /*span
             opacity: 0
             transition: all 0.01s ease
@@ -335,6 +361,14 @@ body
                 margin-left: 20rem
         .about
             margin-top: 30%
+            .contact-list
+                li
+                    font-size: 18px
+                    i
+                        font-size: 24px
+                    a
+                        i
+                            font-size: 24px
         .skills-list
             .skill-title
                 margin-top: 10%
