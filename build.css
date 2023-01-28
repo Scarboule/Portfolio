@@ -3,6 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+.toggleOff{
+  pointer-events: none;
+  display: none;
+}
+.toggleOn{
+  pointer-events: "auto" !important;
+  display: flex !important;
+}
 
 body {
   background-color: #1d1d1d;
